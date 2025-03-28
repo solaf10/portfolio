@@ -1,0 +1,54 @@
+.education .container .box {
+  position: relative;
+  padding-left: 47px;
+  border-left: 2px dashed #1d2939;
+}
+.education .container .box:nth-child(odd):not(:last-child) {
+  padding-bottom: 47px;
+}
+.education .container .box .circle {
+  padding: 2px;
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  outline: 2px dashed #1d2939;
+  border: 1px solid white;
+  background-color: var(--primary-color);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+.education .container .box .text {
+  letter-spacing: -0.3px;
+}
+.education .container .box .text h3 {
+  margin-bottom: 15px;
+  font-weight: 500;
+  font-size: 25px;
+  letter-spacing: -1.5%;
+  color: #344054;
+}
+.education .container .box .text p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #98a2b3;
+}
+/* DarkTheme */
+.home.dark .education .container .box {
+  border-color: white;
+}
+.home.dark .education .container .box .circle {
+  outline-color: white;
+  border-color: var(--dark-bg-color);
+}
+.home.dark .education .container .box .text h3 {
+  color: white;
+}
+/* Responsive */
+@media (max-width: 1120px) {
+  .education .container .box:not(:last-child) {
+    padding-bottom: 47px;
+  }
+}

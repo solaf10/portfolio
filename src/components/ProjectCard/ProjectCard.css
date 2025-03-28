@@ -1,0 +1,41 @@
+.projects .card .project-image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.projects .card .project-image img {
+  width: 100%;
+  border-radius: 8px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.projects .card .content a {
+  align-self: flex-end;
+  margin-bottom: -5px;
+}
+.projects .card .project-image:hover img {
+  /* transform: rotate(5deg) scale(1.1); */
+  transform: scale(1.1);
+}
+.projects .card .content {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.projects .card .content .infos h3 {
+  font-size: 22px;
+  font-weight: 600;
+}
+.projects .card .content .infos p {
+  font-size: 16px;
+  font-weight: 400;
+}
+.projects .card .content .icon {
+  align-self: flex-end;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.projects .card .content .icon:hover {
+  transform: scale(1.1);
+}

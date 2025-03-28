@@ -1,0 +1,72 @@
+.education {
+  padding-bottom: unset;
+  position: relative;
+}
+.education .top-decoration {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.education .section-title {
+  text-align: center;
+}
+.education .section-title h2 {
+  color: #282938;
+}
+.education .container {
+}
+.education .container .experiences {
+  padding-top: 90px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  justify-content: space-between;
+  column-gap: 80px;
+}
+
+.education .holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.education .holder .up-arrow {
+  margin-right: 70px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.education .holder .up-arrow:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.education .holder .arrow {
+  font-size: 25px;
+  font-weight: normal;
+}
+/* DarkTheme */
+.home.dark .education .section-title h2 {
+  color: white;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .education > img {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .education .container .experiences {
+    padding-top: 40px;
+    text-align: center;
+    grid-template-columns: none;
+  }
+  .education .holder .up-arrow {
+    margin-right: 30px;
+  }
+}

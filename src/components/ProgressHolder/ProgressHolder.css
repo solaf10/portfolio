@@ -1,0 +1,65 @@
+.about .container .skills {
+  margin-top: 40px;
+}
+.about .container .prog-holder {
+  margin-bottom: 30px;
+}
+.about .container .prog-holder h4 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 3%;
+  text-transform: uppercase;
+}
+.about .container .prog {
+  height: 11px;
+  border-radius: 6px;
+  background-color: #edecec;
+}
+.about .container .prog-holder span {
+  height: 100%;
+  display: block;
+  position: relative;
+  border-radius: 6px;
+  background: var(--primary-color);
+}
+.about .container .prog-holder span::before {
+  content: attr(data-progress);
+  width: 33px;
+  height: 20px;
+  padding: 4px 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -45px;
+  right: -11px;
+  color: white;
+  font-weight: 400;
+  font-size: 12px;
+  /* border-radius: 4px; */
+  border-radius: 10px;
+  background-color: var(--primary-color);
+}
+.about .container .prog-holder span::after {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 4px;
+  border-radius: 12px;
+  border-width: 8px;
+  border-style: solid;
+  border-color: var(--primary-color) transparent transparent transparent;
+}
+.about .container .prog-holder .circle {
+  display: block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: -7px;
+  right: 0;
+  border-radius: 50%;
+  border: 3.5px solid #0c96e2;
+  background-color: #edecec;
+  box-shadow: 0px 4px 7px 0px #00000033;
+}

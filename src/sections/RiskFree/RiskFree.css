@@ -1,0 +1,105 @@
+.risk-free-holder {
+  margin: 0px auto;
+  padding: 0px 70px;
+}
+.risk-free {
+  padding: 100px 0px;
+  position: relative;
+  width: 100%;
+  border-radius: 32px;
+  color: white;
+  background-color: var(--secondary-color);
+  background-image: url("/assets/images/risk-free-LInes.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.risk-free::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 32px;
+  background-color: var(--primary-color);
+  z-index: -1;
+  transform: rotate(-1.34deg);
+}
+.risk-free .container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.risk-free .container .text {
+  width: 50vw;
+}
+.risk-free .container .text h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 48px;
+}
+.risk-free .container .text p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.risk-free .container .text p span {
+  font-weight: 700;
+}
+.risk-free .container a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  transition: 0.5s;
+}
+.risk-free .container a:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.risk-free .container a:hover .arrow {
+  animation: moving-arrow 0.8s linear infinite;
+}
+.risk-free .container a span {
+  font-size: 14px;
+}
+.risk-free .container a .arrow {
+  font-size: 16px;
+}
+@media (max-width: 991px) {
+  .risk-free .container {
+    flex-wrap: wrap;
+    gap: 30px;
+    text-align: center;
+    justify-content: center;
+  }
+  .risk-free .container .text {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .risk-free-holder {
+    padding: 0px 30px;
+  }
+  .risk-free {
+    padding: 50px 0px;
+  }
+  .risk-free .container .text h2 {
+    font-size: 40px;
+  }
+  .risk-free .container .text p {
+    font-size: 16px;
+  }
+}
+/* animation */
+@keyframes moving-arrow {
+  100% {
+    transform: translateX(6px);
+  }
+}

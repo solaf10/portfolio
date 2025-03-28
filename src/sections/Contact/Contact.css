@@ -1,0 +1,109 @@
+.contact .Toastify {
+  width: 400px !important;
+}
+.contact .container .section-title {
+  margin-bottom: 56px; /* related to the section-title fot the projects section */
+}
+.contact .container .content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact .container .content .contact-infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 76px;
+}
+.contact .container .content form {
+  flex-basis: 57%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 26px;
+}
+.contact .container .content form input:not([type="submit"]),
+.contact .container .content form textarea {
+  width: calc(50% - 13px);
+  padding: 20px 27px;
+  border-radius: 8px;
+  border: 0.3px solid #bec0bf;
+  transition: 0.5s;
+  caret-color: #1d2130;
+  background-color: transparent;
+}
+.contact .content form input::placeholder,
+.contact .content form textarea::placeholder {
+  color: #92929d;
+  font-size: 16px;
+}
+.contact .content form input:focus,
+.contact .content form textarea:focus {
+  outline: none;
+  color: #1d2130;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.contact .container .content form input[type="tel"],
+.contact .container .content form textarea {
+  width: 100%;
+}
+.contact .container .content form textarea {
+  height: 170px;
+  resize: none;
+}
+.contact .container .content form input.btn {
+  max-width: 200px;
+  height: 50px;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: 0.5s;
+  background-color: var(--primary-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+.contact .container .content form input.btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.contact .container .content form input.btn.disabled {
+  color: #a4a4a4;
+  background-color: #eeedeb;
+  color: #a6a6a6;
+  font-weight: bold;
+  /* border: 1px solid var(--primary-color);
+  background-color: transparent; */
+  box-shadow: none;
+  cursor: initial;
+}
+/* DarkTheme */
+.home.dark .contact .container .content form input:not([type="submit"]),
+.home.dark .contact .container .content form textarea {
+  color: white;
+  caret-color: white;
+}
+/* Responsive */
+@media (max-width: 991px) {
+  .contact .container .content {
+    /* flex-wrap: wrap; */
+  }
+  .contact .container .content .contact-infos {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 48px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 26px;
+  }
+  .contact .container .content form {
+    flex-basis: 100%;
+    justify-content: center;
+  }
+}
+@media (max-width: 500px) {
+  .contact .Toastify {
+    width: 100% !important;
+  }
+}
