@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import NavBar from "../../components/NavBar/NavBar";
 import About from "../../sections/About/About";
 import Contact from "../../sections/Contact/Contact";
@@ -18,32 +18,35 @@ const Home = ({ setIsDark, footer }) => {
   const riskFree = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
-  const offsetTops = useRef([]);
+  // const offsetTops = useRef([]);
+  const [offsetTops, setOffsetTops] = useState([]);
   // effects
   useEffect(() => {
     const updateOffsets = () => {
-      offsetTops.current = [
+      setOffsetTops([
         0,
         about?.current?.offsetTop,
         education?.current?.offsetTop,
         projects?.current?.offsetTop,
         contact?.current?.offsetTop,
         footer?.current?.offsetTop,
-      ];
+      ]);
     };
-
+    console.log(offsetTops);
     updateOffsets();
 
+    window.addEventListener("load", updateOffsets);
     window.addEventListener("resize", updateOffsets);
 
     return () => {
+      window.removeEventListener("load", updateOffsets);
       window.removeEventListener("resize", updateOffsets);
     };
-  }, []);
+  }, [about, education, projects, contact, footer]);
   const isDark = useContext(ThemeContext);
   function handleScroll(ID) {
     window.scrollTo({
-      top: offsetTops?.current[ID - 1] + 1, // Scroll to 500px from the top
+      top: offsetTops[ID - 1] + 1, // Scroll to 500px from the top
       behavior: "smooth",
     });
   }

@@ -86,12 +86,12 @@ const SingleProject = ({ setIsDark }) => {
   function handleNavigateAndScroll(ID) {
     navigate("/", { state: ID });
   }
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const productInfoID = useParams().id;
   const productInfo = projuctsDetailedInfos[productInfoID - 1];
   const isDark = useContext(ThemeContext);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [productInfoID]);
   return (
     <div className={isDark ? "single-project dark" : "single-project"}>
       <NavBar

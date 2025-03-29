@@ -27,14 +27,14 @@ const NavBar = ({ setIsDark, offsetTops, page, handler, clickedLink }) => {
         setScroll(clickedLink.state);
         handler(clickedLink.state);
       }
-    }, []);
+    }, [clickedLink?.state, handler]);
   page == "home" &&
     useEffect(() => {
       const callback = throttle(() => {
-        for (let i = 0; i < offsetTops?.current.length - 1; i++) {
+        for (let i = 0; i < offsetTops?.length - 1; i++) {
           if (
-            window.scrollY >= offsetTops?.current[i] &&
-            window.scrollY < offsetTops?.current[i + 1] &&
+            window.scrollY >= offsetTops[i] &&
+            window.scrollY < offsetTops[i + 1] &&
             scroll !== i + 1
           ) {
             setScroll(i + 1);

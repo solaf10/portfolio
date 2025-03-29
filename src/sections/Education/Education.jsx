@@ -47,7 +47,7 @@ const Education = ({ ref, endOfSection }) => {
       window.scrollY >= ref?.current?.offsetTop &&
         window.scrollY < endOfSection?.current.offsetTop
     );
-  }, []);
+  }, [ref, endOfSection]);
   useEffect(() => {
     const callback = throttle(() => {
       setIsShow(
@@ -61,7 +61,7 @@ const Education = ({ ref, endOfSection }) => {
       window.removeEventListener("scroll", callback);
       callback.cancel();
     };
-  }, [endOfSection]);
+  }, [ref, endOfSection]);
   return (
     <section className="education" id="education" ref={ref}>
       <img className="top-decoration" src="/assets/images/edu-top.svg" alt="" />
