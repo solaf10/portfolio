@@ -1,5 +1,5 @@
 .about {
-  padding-top: 60px;
+  padding-top: 80px;
 }
 .about .section-title {
   margin-bottom: 5px;
@@ -31,7 +31,7 @@
 }
 @media (max-width: 1120px) {
   .about {
-    padding-top: unset;
+    padding-top: 30px;
   }
   .about .container .content .text {
     text-align: center;

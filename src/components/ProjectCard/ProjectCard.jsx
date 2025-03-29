@@ -16,7 +16,7 @@ const ProjectCard = ({ id, image, name, skills, demoLink, style }) => {
           <h3>{name}</h3>
           <p>{skills}</p>
         </div>
-        <a href={demoLink}>
+        <a href={demoLink} target="_blank">
           <img className="icon" src="/assets/images/demo-icon.svg" alt="" />
         </a>
       </div>

@@ -3,14 +3,15 @@ import ProgressHolder from "../../components/ProgressHolder/ProgressHolder";
 import { useContext } from "react";
 import { ThemeContext } from "../../App";
 
+const skills = [
+  { id: 1, name: "html5", amount: 80 },
+  { id: 2, name: "css3", amount: 85 },
+  // { id: 3, name: "bootstrap", amount: 70 },
+  { id: 4, name: "js", amount: 75 },
+  { id: 5, name: "React", amount: 90 },
+];
+
 const About = ({ ref }) => {
-  const skills = [
-    { id: 1, name: "html5", amount: 80 },
-    { id: 2, name: "css3", amount: 85 },
-    // { id: 3, name: "bootstrap", amount: 70 },
-    { id: 4, name: "js", amount: 75 },
-    { id: 5, name: "React", amount: 90 },
-  ];
   const isDark = useContext(ThemeContext);
   return (
     <div className="about" id="about" ref={ref}>

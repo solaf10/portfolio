@@ -13,7 +13,7 @@ const Footer = ({ ref }) => {
         <div className="developer">Develpoment by Solaf</div>
         <div className="icons">
           <a
-            href="https://www.facebook.com/solaf.alfares"
+            href="https://www.facebook.com/profile.php?id=61574606949279"
             target="_blank"
             className="icon-holder"
           >

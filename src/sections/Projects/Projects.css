@@ -32,6 +32,14 @@ section.projects {
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 58px;
 }
+/* dark mode */
+.home.dark .projects .container a.btn {
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.04);
+}
+.home.dark .projects .container a.btn:hover {
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.08);
+}
+/* responsive */
 @media (max-width: 991px) {
   .projects .container .text {
     width: unset;

@@ -80,7 +80,7 @@ section:not(.Toastify) {
   }
 }
 @media (max-width: 500px) {
-  section {
-    padding: 60px 0px;
+  section:not(.Toastify) {
+    padding: 90px 0px;
   }
 }

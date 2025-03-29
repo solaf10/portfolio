@@ -54,6 +54,12 @@
 .home.dark .education .section-title h2 {
   color: white;
 }
+.home.dark .education .holder .up-arrow {
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.04);
+}
+.home.dark .education .holder .up-arrow:hover {
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.08);
+}
 /* Responsive */
 @media (max-width: 768px) {
   .education > img {
@@ -68,5 +74,11 @@
   }
   .education .holder .up-arrow {
     margin-right: 30px;
+  }
+  .education .container .box {
+    padding-left: 30px;
+  }
+  .education .container .box:nth-child(odd):not(:last-child) {
+    padding-bottom: 30px;
   }
 }

@@ -48,7 +48,7 @@ const ProjectPageHero = ({ productInfo }) => {
                 className="icon"
                 onClick={() => setIsFullScreen(true)}
               />
-              <a href={demoLink}>
+              <a href={demoLink} target="_blank">
                 <img
                   className="icon"
                   src="/assets/images/white-demo-arrow.svg"
@@ -64,7 +64,7 @@ const ProjectPageHero = ({ productInfo }) => {
                   <h1>{title}</h1>
                   <div className="date">{date}</div>
                 </div>
-                <a href={demoLink}>
+                <a href={demoLink} target="_blank">
                   <img
                     className="icon"
                     src="/assets/images/demo-icon.svg"
@@ -93,7 +93,7 @@ const ProjectPageHero = ({ productInfo }) => {
                   <span>{libraries.join(" , ")}.</span>
                 </div>
               )}
-              <a href={repoLink} className="btn">
+              <a href={repoLink} target="_blank" className="btn">
                 Github Repo
               </a>
             </div>

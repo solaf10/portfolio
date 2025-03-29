@@ -21,15 +21,25 @@ const Home = ({ setIsDark, footer }) => {
   const offsetTops = useRef([]);
   // effects
   useEffect(() => {
-    offsetTops.current = [
-      0,
-      about?.current?.offsetTop,
-      education?.current?.offsetTop,
-      projects?.current?.offsetTop,
-      contact?.current?.offsetTop,
-      footer?.current?.offsetTop,
-    ];
-  }, [footer]);
+    const updateOffsets = () => {
+      offsetTops.current = [
+        0,
+        about?.current?.offsetTop,
+        education?.current?.offsetTop,
+        projects?.current?.offsetTop,
+        contact?.current?.offsetTop,
+        footer?.current?.offsetTop,
+      ];
+    };
+
+    updateOffsets();
+
+    window.addEventListener("resize", updateOffsets);
+
+    return () => {
+      window.removeEventListener("resize", updateOffsets);
+    };
+  }, []);
   const isDark = useContext(ThemeContext);
   function handleScroll(ID) {
     window.scrollTo({

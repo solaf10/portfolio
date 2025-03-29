@@ -7,29 +7,30 @@ import emailjs from "@emailjs/browser";
 import { useRef, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
+const contactInfos = [
+  {
+    id: 1,
+    icon: <IoCallOutline />,
+    title: "Call me",
+    info: "+963967266989",
+  },
+  {
+    id: 2,
+    icon: <HiOutlineEnvelope />,
+    title: "Email me",
+    info: "alfaressolaf1@gmail.com",
+  },
+  {
+    id: 3,
+    icon: <IoLocationOutline />,
+    title: "Address",
+    info: "Homs,syria",
+  },
+];
+
 const Contact = ({ ref }) => {
   const form = useRef(null);
   const [isLoading, setIsLoading] = useState(false);
-  const contactInfos = [
-    {
-      id: 1,
-      icon: <IoCallOutline />,
-      title: "Call me",
-      info: "+963967266989",
-    },
-    {
-      id: 2,
-      icon: <HiOutlineEnvelope />,
-      title: "Email me",
-      info: "alfaressolaf1@gmail.com",
-    },
-    {
-      id: 3,
-      icon: <IoLocationOutline />,
-      title: "Address",
-      info: "Homs,syria",
-    },
-  ];
   // const notify = (status) => toast(status, { position: "top-center" });
   const notify = (status) => toast(status);
   const sendEmail = (e) => {
