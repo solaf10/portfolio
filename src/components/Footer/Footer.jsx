@@ -1,5 +1,5 @@
-import { useContext } from "react";
 import "./Footer.css";
+import { useContext } from "react";
 import { FaInstagram } from "react-icons/fa";
 import { RiDiscordLine, RiFacebookFill } from "react-icons/ri";
 import { ThemeContext } from "../../App";

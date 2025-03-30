@@ -71,8 +71,6 @@
   background-color: #eeedeb;
   color: #a6a6a6;
   font-weight: bold;
-  /* border: 1px solid var(--primary-color);
-  background-color: transparent; */
   box-shadow: none;
   cursor: initial;
 }
@@ -90,9 +88,6 @@
 }
 /* Responsive */
 @media (max-width: 991px) {
-  .contact .container .content {
-    /* flex-wrap: wrap; */
-  }
   .contact .container .content .contact-infos {
     width: 100%;
     padding: 0px;

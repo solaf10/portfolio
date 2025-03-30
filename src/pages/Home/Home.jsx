@@ -18,7 +18,6 @@ const Home = ({ setIsDark, footer }) => {
   const riskFree = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
-  // const offsetTops = useRef([]);
   const [offsetTops, setOffsetTops] = useState([]);
   // effects
   useEffect(() => {
@@ -32,7 +31,6 @@ const Home = ({ setIsDark, footer }) => {
         footer?.current?.offsetTop,
       ]);
     };
-    console.log(offsetTops);
     updateOffsets();
 
     window.addEventListener("load", updateOffsets);
@@ -46,7 +44,7 @@ const Home = ({ setIsDark, footer }) => {
   const isDark = useContext(ThemeContext);
   function handleScroll(ID) {
     window.scrollTo({
-      top: offsetTops[ID - 1] + 1, // Scroll to 500px from the top
+      top: offsetTops[ID - 1] + 1,
       behavior: "smooth",
     });
   }

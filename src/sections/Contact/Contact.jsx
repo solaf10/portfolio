@@ -1,6 +1,5 @@
 import "./Contact.css";
 import { IoCallOutline, IoLocationOutline } from "react-icons/io5";
-import {} from "react-icons/io5";
 import { HiOutlineEnvelope } from "react-icons/hi2";
 import ContactInfo from "../../components/ContactInfo/ContactInfo";
 import emailjs from "@emailjs/browser";

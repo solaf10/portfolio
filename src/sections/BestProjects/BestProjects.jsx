@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react";
 import "./BestProjects.css";
+import { useEffect, useRef, useState } from "react";
 import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import { transform } from "lodash";
 import { useParams } from "react-router-dom";
 
 const bestProjects = [

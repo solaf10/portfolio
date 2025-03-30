@@ -15,7 +15,6 @@
   margin-bottom: -5px;
 }
 .projects .card .project-image:hover img {
-  /* transform: rotate(5deg) scale(1.1); */
   transform: scale(1.1);
 }
 .projects .card .content {

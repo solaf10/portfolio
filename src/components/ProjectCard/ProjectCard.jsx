@@ -1,5 +1,5 @@
-import { useNavigate } from "react-router-dom";
 import "./ProjectCard.css";
+import { useNavigate } from "react-router-dom";
 
 const ProjectCard = ({ id, image, name, skills, demoLink, style }) => {
   const navigate = useNavigate();

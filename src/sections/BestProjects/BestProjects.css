@@ -27,8 +27,6 @@ section.best-projects {
 .best-projects .section-title .btns button:not(.disabled):hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
-.best-projects .section-title .btns button {
-}
 .best-projects .section-title .btns button.disabled {
   color: #a6a6a6;
   border: 1px solid var(--primary-color);
@@ -54,11 +52,6 @@ section.best-projects {
 .best-projects .card .project-image img {
   height: 220px;
 }
-.best-projects .slider {
-}
-.best-projects .slider {
-}
-/* 1455 2 */
 @media (max-width: 991px) {
   .best-projects .slider .card {
     flex: 0 0 50%;

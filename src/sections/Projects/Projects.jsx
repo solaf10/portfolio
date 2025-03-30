@@ -1,5 +1,5 @@
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import "./Projects.css";
+import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import { MdArrowOutward } from "react-icons/md";
 
 const projects = [

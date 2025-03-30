@@ -1,5 +1,6 @@
-.about {
+section.about {
   padding-top: 80px;
+  padding-bottom: 0px;
 }
 .about .section-title {
   margin-bottom: 5px;

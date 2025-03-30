@@ -52,3 +52,9 @@
     padding-bottom: 47px;
   }
 }
+@media (max-width: 500px) {
+  .education .container .box:nth-child(odd):not(:last-child) {
+    padding-bottom: 30px;
+    padding-left: 30px;
+  }
+}

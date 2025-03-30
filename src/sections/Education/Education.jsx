@@ -1,6 +1,6 @@
+import "./Education.css";
 import { useEffect, useState } from "react";
 import EducationBox from "../../components/EducationBox/EducationBox";
-import "./Education.css";
 import { IoMdArrowUp } from "react-icons/io";
 import { throttle } from "lodash";
 
@@ -65,7 +65,6 @@ const Education = ({ ref, endOfSection }) => {
   return (
     <section className="education" id="education" ref={ref}>
       <img className="top-decoration" src="/assets/images/edu-top.svg" alt="" />
-
       <div className="container">
         <div className="section-title">
           <p>Education and Experience</p>

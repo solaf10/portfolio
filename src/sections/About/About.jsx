@@ -14,7 +14,7 @@ const skills = [
 const About = ({ ref }) => {
   const isDark = useContext(ThemeContext);
   return (
-    <div className="about" id="about" ref={ref}>
+    <section className="about" id="about" ref={ref}>
       <div className="container">
         <div className="image">
           <img
@@ -52,7 +52,7 @@ const About = ({ ref }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,11 +1,11 @@
-import { ThemeContext } from "../../App";
 import "./Hero.css";
+import { ThemeContext } from "../../App";
 import { useContext } from "react";
 
 const Hero = ({ ref }) => {
   const isDark = useContext(ThemeContext);
   return (
-    <div className="hero" ref={ref}>
+    <section className="hero" ref={ref}>
       <div className="container">
         <div className="text">
           <h1>
@@ -30,7 +30,7 @@ const Hero = ({ ref }) => {
         alt="dot"
         className="dot"
       />
-    </div>
+    </section>
   );
 };
 
