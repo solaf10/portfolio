@@ -40,19 +40,19 @@ const experiences = [
   },
 ];
 
-const Education = ({ ref, endOfSection }) => {
+const Education = ({ ref }) => {
   const [isShow, setIsShow] = useState(false);
   useEffect(() => {
     setIsShow(
-      window.scrollY >= ref?.current?.offsetTop &&
-        window.scrollY < endOfSection?.current.offsetTop
+      window.scrollY >= ref?.current?.offsetTop
+      // window.scrollY < endOfSection?.current.offsetTop
     );
-  }, [ref, endOfSection]);
+  }, [ref]);
   useEffect(() => {
     const callback = throttle(() => {
       setIsShow(
-        window.scrollY >= ref?.current?.offsetTop &&
-          window.scrollY < endOfSection?.current.offsetTop
+        window.scrollY >= ref?.current?.offsetTop
+        // window.scrollY < endOfSection?.current.offsetTop
       );
     }, 200);
 
@@ -61,7 +61,7 @@ const Education = ({ ref, endOfSection }) => {
       window.removeEventListener("scroll", callback);
       callback.cancel();
     };
-  }, [ref, endOfSection]);
+  }, [ref]);
   return (
     <section className="education" id="education" ref={ref}>
       <img className="top-decoration" src="/assets/images/edu-top.svg" alt="" />
