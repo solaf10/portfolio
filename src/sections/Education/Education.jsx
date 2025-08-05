@@ -16,7 +16,7 @@ const experiences = [
     id: 2,
     title: "Front-End Lv2 Trainee – Vica Company",
     date: "Nov 2024 – Feb 2025 | Online",
-    desc: `During this 4-month online training, I expanded my skills by learning JavaScript, Tailwind, Git & GitHub, and React.js, building interactive web applications with modern concepts. The program also included a basic overview of Next.js, providing insights into modern front-end frameworks. I applied my skills through practical projects, creating responsive and dynamic user interfaces.
+    desc: `During this 4-month online training, I expanded my skills by learning JavaScript, Tailwind, Git & GitHub, and React.js, building interactive web applications with modern concepts. The program also included a basic overview of Next.js, providing insights into modern front-end frameworks. I applied my skills through practical projects, creating responsive and dynamic user interfaces.I successfully completed the program and earned a certificate of achievement.
 `,
   },
   {
@@ -30,13 +30,19 @@ const experiences = [
     title: "UX Design Trainee – Women in Tech (Paper Airplane Program)",
     date: "Feb 2025 – May 2025 | Online",
     desc: `
-    As part of the Women in Tech Paper Airplane Program, I am undergoing UX design training that covers key concepts such as user research, prototyping, and UI principles. The program includes a final project where I will apply my skills to create a practical UX solution. Upon completion, I will receive a certificate recognizing my proficiency in UX design.`,
+    Completed a UX design training program as part of the Women in Tech initiative by Paper Airplanes. The program covered core concepts such as user research, prototyping, wireframing, and UI principles. For the final project, I applied these skills to design a practical UX solution. Successfully earned a certificate upon completion, demonstrating proficiency in UX design.`,
   },
   {
     id: 5,
     title: "Self-Learning – Online Courses & Projects",
     desc: `
     I actively enhance my skills through self-learning, completing several online courses and building practical projects. I followed Elzero Web School’s YouTube courses, where I mastered HTML, CSS, and JavaScript. Additionally, I am nearing the completion of Jonas Schmedtmann’s Udemy course, which covers advanced front-end practices, modern JavaScript, and React development. (No certificate available).`,
+  },
+  {
+    id: 6,
+    title: "Full-Stack Web Development Trainee – Vika Next.js Program",
+    desc: `
+    Currently enrolled in an intensive web development training program with Vika, focusing on building robust full-stack applications. The program covers advanced front-end and back-end technologies, including TypeScript, Advanced React, Redux & Redux Toolkit, Next.js, Node.js basics, and MongoDB. Through hands-on projects and real-world scenarios, I am deepening my skills in scalable web app development and modern JavaScript frameworks.`,
   },
 ];
 
