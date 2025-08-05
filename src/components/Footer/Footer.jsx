@@ -13,33 +13,29 @@ const Footer = ({ ref }) => {
         <div className="developer">Develpoment by Solaf</div>
         <div className="icons">
           <a
-            // href="https://www.facebook.com/profile.php?id=61574606949279"
-            href="#"
-            // target="_blank"
+            href="https://www.facebook.com/profile.php?id=61574606949279"
+            target="_blank"
             className="icon-holder"
           >
             <RiFacebookFill className="icon" />
           </a>
           <a
-            // href="https://discord.gg/txuauRGZ"
-            href="#"
-            // target="_blank"
+            href="https://discord.gg/txuauRGZ"
+            target="_blank"
             className="icon-holder"
           >
             <RiDiscordLine className="icon" />
           </a>
           <a
-            // href="https://www.instagram.com/alfares.solaf/"
-            href="#"
-            // target="_blank"
+            href="https://www.instagram.com/alfares.solaf/"
+            target="_blank"
             className="icon-holder"
           >
             <FaInstagram className="icon" />
           </a>
           <a
-            // href="https://www.linkedin.com/in/solaf-alfares-8bba872aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-            href="#"
-            // target="_blank"
+            href="https://www.linkedin.com/in/solaf-alfares-8bba872aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
             className="icon-holder"
           >
             <img className="icon" src="/assets/images/linkedin.svg" alt="" />

@@ -5,17 +5,17 @@ import { MdArrowOutward } from "react-icons/md";
 const projects = [
   {
     id: 1,
-    image: "/assets/images/projects/B-World.png",
-    name: "Online Book Store",
-    skills: "Html-Css3-Vanilla javscript",
-    demoLink: "https://solaf10.github.io/B-World/",
+    image: "/assets/images/projects/TSDashboard.png",
+    name: "DashStack Dashboard",
+    skills: "Html-Css3-typescript-React",
+    demoLink: "https://ts-dashboard-ftfi.vercel.app/",
   },
   {
     id: 2,
-    image: "/assets/images/projects/softy pinko.png",
-    name: "Business Consulting Landing Page",
-    skills: "Html-Css3-Bootstrap",
-    demoLink: "https://solaf10.github.io/soft-pinko/",
+    image: "/assets/images/projects/EvoGym.png",
+    name: "Evo Gym",
+    skills: "Html-Css3-typescript-React",
+    demoLink: "https://evo-gym-6ris.vercel.app/",
   },
   {
     id: 3,
@@ -44,6 +44,20 @@ const projects = [
     name: "Bill Splitter App",
     skills: "Html-Css3-React",
     demoLink: "https://solaf10.github.io/Eat--N-Split/",
+  },
+  {
+    id: 7,
+    image: "/assets/images/projects/B-World.png",
+    name: "Online Book Store",
+    skills: "Html-Css3-Vanilla javscript",
+    demoLink: "https://solaf10.github.io/B-World/",
+  },
+  {
+    id: 8,
+    image: "/assets/images/projects/softy pinko.png",
+    name: "Business Consulting Landing Page",
+    skills: "Html-Css3-Bootstrap",
+    demoLink: "https://solaf10.github.io/soft-pinko/",
   },
 ];
 

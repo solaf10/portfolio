@@ -11,15 +11,13 @@ const contactInfos = [
     id: 1,
     icon: <IoCallOutline />,
     title: "Call me",
-    // info: "+963967266989",
-    info: "999999",
+    info: "+963967266989",
   },
   {
     id: 2,
     icon: <HiOutlineEnvelope />,
     title: "Email me",
-    // info: "alfaressolaf1@gmail.com",
-    info: "example@gmail.com",
+    info: "alfaressolaf1@gmail.com",
   },
   {
     id: 3,
