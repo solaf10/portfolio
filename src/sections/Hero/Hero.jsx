@@ -1,13 +1,13 @@
-import "./Hero.css";
-import { ThemeContext } from "../../App";
-import { useContext } from "react";
+import './Hero.css';
+import { ThemeContext } from '../../App';
+import { useContext } from 'react';
 
 const Hero = ({ ref }) => {
   const isDark = useContext(ThemeContext);
   return (
-    <section className="hero" ref={ref}>
-      <div className="container">
-        <div className="text">
+    <section className='hero' ref={ref}>
+      <div className='container'>
+        <div className='text'>
           <h1>
             <span>HEY!</span> I’m Solaf, Frontend Developer
           </h1>
@@ -16,19 +16,23 @@ const Hero = ({ ref }) => {
             blend creativity with technical expertise to bring your vision to
             life. Let’s take your online presence to the next level!
           </p>
-          <a href="/assets/CV/solafAlfares.pdf" download className="btn">
+          <a
+            href='https://drive.google.com/uc?export=download&id=11uGKeSYUHnhCeq5H4Yhpec8lZsu21aUE'
+            download
+            className='btn'
+          >
             Download Cv
           </a>
         </div>
-        <div className="image">
-          <img src="/assets/images/undraw_dev-focus_dd7i.svg" alt="" />
-          <div className="circle"></div>
+        <div className='image'>
+          <img src='/assets/images/undraw_dev-focus_dd7i.svg' alt='' />
+          <div className='circle'></div>
         </div>
       </div>
       <img
-        src={isDark ? "/assets/images/dot-dark.png" : "/assets/images/dot.png"}
-        alt="dot"
-        className="dot"
+        src={isDark ? '/assets/images/dot-dark.png' : '/assets/images/dot.png'}
+        alt='dot'
+        className='dot'
       />
     </section>
   );
