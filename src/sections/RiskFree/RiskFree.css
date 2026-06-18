@@ -9,13 +9,13 @@
   border-radius: 32px;
   color: white;
   background-color: var(--secondary-color);
-  background-image: url("/assets/images/risk-free-LInes.svg");
+  background-image: url('/assets/images/risk-free-LInes.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 .risk-free::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: -10px;
