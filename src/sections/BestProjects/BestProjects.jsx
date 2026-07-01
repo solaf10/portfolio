@@ -1,65 +1,101 @@
-import "./BestProjects.css";
-import { useEffect, useRef, useState } from "react";
-import { IoIosArrowForward, IoIosArrowBack } from "react-icons/io";
-import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import { useParams } from "react-router-dom";
+import './BestProjects.css';
+import { useEffect, useRef, useState } from 'react';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import { useParams } from 'react-router-dom';
 
 const bestProjects = [
   {
+    id: 12,
+    image: '/assets/images/projects/Athar.png',
+    title: 'Donation Campaign Management System',
+    repoLink: 'https://github.com/solaf10/DonationCampaignDashboard',
+    skills: 'React.js • Redux Toolkit • React Query • Material UI • JavaScript',
+    companyProject: false,
+    academicProject: true,
+    status: 'In Progress',
+  },
+  {
+    id: 9,
+    image: '/assets/images/projects/fundoze.png',
+    name: 'Fundoze Childcare Management System',
+    skills: 'React.js • TypeScript • Tailwind CSS',
+    demoLink: null,
+    companyProject: true,
+    confidential: true,
+  },
+  {
+    id: 10,
+    image: '/assets/images/projects/ict.png',
+    name: 'IT Incubator Platform',
+    skills: 'Next.js • TypeScript • Tailwind CSS',
+    demoLink: 'https://scs-incubator-homs.org/ar',
+    companyProject: true,
+    confidential: false,
+  },
+  {
+    id: 11,
+    image: '/assets/images/projects/ArchiLink.png',
+    name: 'ArchiLink Architectural Connection Platform',
+    skills: 'React.js • JavaScript • CSS3',
+    status: 'Local Project',
+    academicProject: true,
+  },
+  {
     id: 1,
-    image: "/assets/images/projects/TSDashboard.png",
-    name: "DashStack Dashboard",
-    skills: "Html-Css3-typescript-React",
-    demoLink: "https://ts-dashboard-ftfi.vercel.app/",
+    image: '/assets/images/projects/TSDashboard.png',
+    name: 'DashStack Dashboard',
+    skills: 'Html • Css3 • typescript • React',
+    demoLink: 'https://ts-dashboard-ftfi.vercel.app/',
   },
   {
     id: 2,
-    image: "/assets/images/projects/EvoGym.png",
-    name: "Evo Gym",
-    skills: "Html-Css3-typescript-React",
-    demoLink: "https://evo-gym-6ris.vercel.app/",
+    image: '/assets/images/projects/EvoGym.png',
+    name: 'Evo Gym',
+    skills: 'Html • Css3 • typescript  • React',
+    demoLink: 'https://evo-gym-6ris.vercel.app/',
   },
   {
     id: 3,
-    image: "/assets/images/projects/Mint-Minimal.png",
-    name: "Digital Agency",
-    skills: "Html-Css3-Vanilla javscript",
-    demoLink: "https://solaf10.github.io/Mint-Minimal/",
+    image: '/assets/images/projects/Mint-Minimal.png',
+    name: 'Digital Agency',
+    skills: 'Html • Css3 • Vanilla javascript',
+    demoLink: 'https://solaf10.github.io/Mint-Minimal/',
   },
   {
     id: 4,
-    image: "/assets/images/projects/usePopcorn.png",
-    name: "Movies app",
-    skills: "Html-Css3-React.js",
-    demoLink: "https://use-popcorn-git-master-solafs-projects.vercel.app/",
+    image: '/assets/images/projects/usePopcorn.png',
+    name: 'Movies app',
+    skills: 'Html • Css3 • React.js',
+    demoLink: 'https://use-popcorn-git-master-solafs-projects.vercel.app/',
   },
   {
     id: 5,
-    image: "/assets/images/projects/dashboard.png",
-    name: "Dashboard",
-    skills: "Html-Css3-React.js",
-    demoLink: "https://dashboard-green-delta.vercel.app/",
+    image: '/assets/images/projects/dashboard.png',
+    name: 'Dashboard',
+    skills: 'Html • Css3 • React.js',
+    demoLink: 'https://dashboard-green-delta.vercel.app/',
   },
   {
     id: 6,
-    image: "/assets/images/projects/eat-n-split.png",
-    name: "Bill Splitter App",
-    skills: "Html-Css3-React",
-    demoLink: "https://solaf10.github.io/Eat--N-Split/",
+    image: '/assets/images/projects/eat-n-split.png',
+    name: 'Bill Splitter App',
+    skills: 'Html • Css3 • React',
+    demoLink: 'https://solaf10.github.io/Eat--N-Split/',
   },
   {
     id: 7,
-    image: "/assets/images/projects/B-World.png",
-    name: "Online Book Store",
-    skills: "Html-Css3-Vanilla javscript",
-    demoLink: "https://solaf10.github.io/B-World/",
+    image: '/assets/images/projects/B-World.png',
+    name: 'Online Book Store',
+    skills: 'Html • Css3 • Vanilla javascript',
+    demoLink: 'https://solaf10.github.io/B-World/',
   },
   {
     id: 8,
-    image: "/assets/images/projects/softy pinko.png",
-    name: "Business Consulting Landing Page",
-    skills: "Html-Css3-Bootstrap",
-    demoLink: "https://solaf10.github.io/soft-pinko/",
+    image: '/assets/images/projects/softy pinko.png',
+    name: 'Business Consulting Landing Page',
+    skills: 'Html • Css3 • Bootstrap',
+    demoLink: 'https://solaf10.github.io/soft-pinko/',
   },
 ];
 
@@ -68,7 +104,7 @@ const BestProjects = () => {
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
   const stopValue = useRef(null);
   useEffect(() => {
-    window.addEventListener("resize", () => {
+    window.addEventListener('resize', () => {
       setScreenWidth(window.innerWidth);
     });
     if (screenWidth >= 991) {
@@ -78,7 +114,7 @@ const BestProjects = () => {
     } else {
       stopValue.current = 1;
     }
-    return removeEventListener("resize", () => {
+    return removeEventListener('resize', () => {
       setScreenWidth(window.innerWidth);
     });
   }, [screenWidth]);
@@ -91,21 +127,21 @@ const BestProjects = () => {
   }
   const displayedProductID = useParams().id;
   const sliderProjects = bestProjects.filter(
-    (project) => displayedProductID != project.id
+    (project) => displayedProductID != project.id,
   );
   return (
-    <section className="projects best-projects">
-      <div className="container">
-        <div className="section-title">
-          <div className="text">
+    <section className='projects best-projects'>
+      <div className='container'>
+        <div className='section-title'>
+          <div className='text'>
             <p>Portfolio</p>
             <h2>
               The Best <span>Projects</span>
             </h2>
           </div>
-          <div className="btns">
+          <div className='btns'>
             <button
-              className={clickCounter <= 0 ? "disabled left" : "left"}
+              className={clickCounter <= 0 ? 'disabled left' : 'left'}
               onClick={handleSlideBackward}
             >
               <IoIosArrowBack />
@@ -113,8 +149,8 @@ const BestProjects = () => {
             <button
               className={
                 clickCounter >= sliderProjects.length - stopValue.current
-                  ? "disabled right"
-                  : "right"
+                  ? 'disabled right'
+                  : 'right'
               }
               onClick={handleSlideForward}
             >
@@ -122,16 +158,20 @@ const BestProjects = () => {
             </button>
           </div>
         </div>
-        <div className="slider">
-          <div className="slider-container">
+        <div className='slider'>
+          <div className='slider-container'>
             {sliderProjects.map((project) => (
               <ProjectCard
                 key={project.id}
                 id={project.id}
-                image={project.image}
-                demoLink={project.demoLink}
                 name={project.name}
+                image={project.image}
                 skills={project.skills}
+                demoLink={project.demoLink}
+                companyProject={project.companyProject}
+                confidential={project.confidential}
+                status={project.status}
+                academicProject={project.academicProject}
                 style={{ transform: `translateX(-${100 * clickCounter}%)` }}
               />
             ))}

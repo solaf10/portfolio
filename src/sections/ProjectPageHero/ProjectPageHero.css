@@ -38,7 +38,7 @@
   }
 }
 .single-project .project-infos .popup::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -55,18 +55,15 @@
 }
 .single-project .project-infos .container {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 40px;
-}
-.single-project .project-infos .container > div {
-  width: 50%;
 }
 .single-project .project-infos .image {
   position: relative;
   img.project-image {
     width: 100%;
     border-radius: 8px;
-    cursor: pointer;
   }
   .overlay {
     position: absolute;

@@ -1,27 +1,57 @@
-import "./ProjectCard.css";
-import { useNavigate } from "react-router-dom";
+import './ProjectCard.css';
+import { useNavigate } from 'react-router-dom';
 
-const ProjectCard = ({ id, image, name, skills, demoLink, style }) => {
+const ProjectCard = ({
+  id,
+  image,
+  name,
+  skills,
+  demoLink,
+  companyProject,
+  confidential,
+  style,
+  status,
+  academicProject,
+}) => {
   const navigate = useNavigate();
+
   function handleNavigation() {
     navigate(`/${id}`);
   }
+
   return (
-    <div className="card" style={style}>
-      <div className="project-image" onClick={handleNavigation}>
-        <img src={image} alt="name" />
+    <div className='card' style={style}>
+      <div className='project-image' onClick={handleNavigation}>
+        <div className='labels'>
+          {(companyProject || academicProject) && (
+            <span className='label company-label'>
+              {companyProject ? 'Asinnah Internship' : 'Academic Project'}
+            </span>
+          )}
+
+          {(confidential || status) && (
+            <span className='label confidential-label'>
+              {status ?? 'Private'}
+            </span>
+          )}
+        </div>
+
+        <img src={image} alt={name} />
       </div>
-      <div className="content">
-        <div className="infos">
+
+      <div className='content'>
+        <div className='infos'>
           <h3>{name}</h3>
           <p>{skills}</p>
         </div>
-        <a href={demoLink} target="_blank">
-          <img className="icon" src="/assets/images/demo-icon.svg" alt="" />
-        </a>
+
+        {demoLink && (
+          <a href={demoLink} target='_blank' rel='noreferrer'>
+            <img className='icon' src='/assets/images/demo-icon.svg' alt='' />
+          </a>
+        )}
       </div>
     </div>
   );
 };
-
 export default ProjectCard;

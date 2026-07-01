@@ -9,6 +9,7 @@
   border-radius: 8px;
   transition: 0.5s;
   cursor: pointer;
+  height: 300px;
 }
 .projects .card .content a {
   align-self: flex-end;
@@ -26,6 +27,7 @@
 .projects .card .content .infos h3 {
   font-size: 22px;
   font-weight: 600;
+  height: 67px;
 }
 .projects .card .content .infos p {
   font-size: 16px;
@@ -38,4 +40,34 @@
 }
 .projects .card .content .icon:hover {
   transform: scale(1.1);
+}
+.project-image {
+  position: relative;
+}
+
+.labels {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 10;
+}
+
+.label {
+  padding: 7px 14px;
+  border-radius: 30px;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  backdrop-filter: blur(8px);
+}
+
+.company-label {
+  background: var(--secondary-color);
+}
+
+.confidential-label {
+  background: rgba(0, 0, 0, 0.8);
 }
