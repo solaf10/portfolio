@@ -12,6 +12,23 @@ const experiences = [
     desc: `
     Working as a Front-End Developer Intern at Asinnah Startup, where I built production-ready interfaces using React, Next.js, TypeScript, Tailwind CSS, and Framer Motion. I collaborated with the development team through GitLab for version control and code reviews. During the internship, I contributed to several real-world projects, including a daycare management dashboard, a landing page for Al-Birr Charity Association in Homs, and a platform for the Information Technology & Telecommunications Incubator at the University of Homs.`,
   },
+
+  {
+    id: 2,
+    title: 'Advanced Front-End Development Trainee – Vika Company',
+    date: '2025 | Online',
+    desc: `
+    Completed intensive training focused on advanced front-end technologies, including TypeScript, Advanced React concepts, Redux Toolkit, and Next.js fundamentals. The program emphasized building scalable applications and applying modern development practices through hands-on projects.`,
+  },
+
+  {
+    id: 3,
+    title: 'UX Design Trainee – Women in Tech (Paper Airplanes Program)',
+    date: 'Feb 2025 – May 2025 | Online',
+    desc: `
+    Completed a UX design training program as part of the Women in Tech initiative by Paper Airplanes. The program covered user research, wireframing, prototyping, and UI principles. For the final project, I applied these skills to design a practical UX solution and successfully earned a certificate upon completion.`,
+  },
+
   {
     id: 4,
     title: 'Front-End Lv2 Trainee – Vica Company',
@@ -21,26 +38,11 @@ const experiences = [
   },
 
   {
-    id: 2,
-    title: 'Advanced Front-End Development Trainee – Vika Company',
-    date: '2025 | Online',
-    desc: `
-    Completed intensive training focused on advanced front-end technologies, including TypeScript, Advanced React concepts, Redux Toolkit, and Next.js fundamentals. The program emphasized building scalable applications and applying modern development practices through hands-on projects.`,
-  },
-  {
     id: 5,
     title: 'Front-End Trainee – Darrebni Company',
     date: 'Oct 2023 – Apr 2024 | Onsite, Homs',
     desc: `
     Completed a six-month onsite internship covering HTML, CSS, JavaScript, Bootstrap, Git & GitHub, and React.js, including React libraries and Redux for state management. The program provided hands-on experience in building interactive and scalable web applications and concluded with a certificate of achievement.`,
-  },
-
-  {
-    id: 3,
-    title: 'UX Design Trainee – Women in Tech (Paper Airplanes Program)',
-    date: 'Feb 2025 – May 2025 | Online',
-    desc: `
-    Completed a UX design training program as part of the Women in Tech initiative by Paper Airplanes. The program covered user research, wireframing, prototyping, and UI principles. For the final project, I applied these skills to design a practical UX solution and successfully earned a certificate upon completion.`,
   },
 
   {
@@ -83,11 +85,12 @@ const Education = ({ ref }) => {
           <h2>Education & Experience</h2>
         </div>
         <div className='experiences'>
-          {experiences.map((experience) => (
+          {experiences.map((experience, i) => (
             <EducationBox
               key={experience.id}
               title={experience.title}
               desc={experience.desc}
+              index={i}
             />
           ))}
         </div>

@@ -122,7 +122,7 @@ const Projects = ({ ref }) => {
           </a>
         </div>
         <div className='projects-holder'>
-          {projects.map((project) => (
+          {projects.map((project, i) => (
             <ProjectCard
               key={project.id}
               id={project.id}
@@ -134,6 +134,7 @@ const Projects = ({ ref }) => {
               confidential={project.confidential}
               status={project.status}
               academicProject={project.academicProject}
+              index={i}
             />
           ))}
         </div>

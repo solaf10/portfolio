@@ -1,5 +1,6 @@
 import './ProjectCard.css';
 import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 const ProjectCard = ({
   id,
@@ -12,6 +13,7 @@ const ProjectCard = ({
   style,
   status,
   academicProject,
+  index,
 }) => {
   const navigate = useNavigate();
 
@@ -20,7 +22,18 @@ const ProjectCard = ({
   }
 
   return (
-    <div className='card' style={style}>
+    <motion.div
+      className='card'
+      style={style}
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.12,
+        ease: 'easeOut',
+      }}
+    >
       <div className='project-image' onClick={handleNavigation}>
         <div className='labels'>
           {(companyProject || academicProject) && (
@@ -51,7 +64,8 @@ const ProjectCard = ({
           </a>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 };
+
 export default ProjectCard;
