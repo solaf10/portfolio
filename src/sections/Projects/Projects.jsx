@@ -134,7 +134,6 @@ const Projects = ({ ref }) => {
               confidential={project.confidential}
               status={project.status}
               academicProject={project.academicProject}
-              index={i}
             />
           ))}
         </div>

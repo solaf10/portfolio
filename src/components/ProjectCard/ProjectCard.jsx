@@ -13,7 +13,6 @@ const ProjectCard = ({
   style,
   status,
   academicProject,
-  index,
 }) => {
   const navigate = useNavigate();
 
@@ -22,18 +21,7 @@ const ProjectCard = ({
   }
 
   return (
-    <motion.div
-      className='card'
-      style={style}
-      initial={{ opacity: 0, y: 50 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.2 }}
-      transition={{
-        duration: 0.6,
-        delay: index * 0.12,
-        ease: 'easeOut',
-      }}
-    >
+    <motion.div className='card' style={style}>
       <div className='project-image' onClick={handleNavigation}>
         <div className='labels'>
           {(companyProject || academicProject) && (
