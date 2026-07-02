@@ -8,7 +8,7 @@ const projects = [
     image: '/assets/images/projects/Athar.png',
     name: 'Donation Campaign Management System',
     repoLink: 'https://github.com/solaf10/DonationCampaignDashboard',
-    skills: 'React.js • Redux Toolkit • React Query • Material UI • JavaScript',
+    skills: 'React.js • Redux Toolkit • Tanstack • MUI • JS',
     companyProject: false,
     academicProject: true,
     status: 'In Progress',
@@ -35,7 +35,7 @@ const projects = [
     id: 11,
     image: '/assets/images/projects/ArchiLink.png',
     name: 'ArchiLink Architectural Connection Platform',
-    skills: 'React.js • JavaScript • CSS3',
+    skills: 'React.js • JS • CSS3',
     status: 'Local Project',
     academicProject: true,
   },
@@ -43,65 +43,57 @@ const projects = [
     id: 1,
     image: '/assets/images/projects/TSDashboard.png',
     name: 'DashStack Dashboard',
-    skills: 'React.js • TypeScript',
+    skills: 'Html • CSS3 • TypeScript • React.js',
     demoLink: 'https://ts-dashboard-ftfi.vercel.app/',
-    companyProject: false,
   },
   {
     id: 2,
     image: '/assets/images/projects/EvoGym.png',
     name: 'Evo Gym',
-    skills: 'React.js • TypeScript',
+    skills: 'Html • CSS3 • TypeScript  • React.js',
     demoLink: 'https://evo-gym-6ris.vercel.app/',
-    companyProject: false,
   },
   {
     id: 3,
     image: '/assets/images/projects/Mint-Minimal.png',
     name: 'Digital Agency',
-    skills: 'HTML • CSS • JavaScript',
+    skills: 'Html • Css3 • JS',
     demoLink: 'https://solaf10.github.io/Mint-Minimal/',
-    companyProject: false,
   },
   {
     id: 4,
     image: '/assets/images/projects/usePopcorn.png',
-    name: 'Movies App',
-    skills: 'React.js',
+    name: 'Movies app',
+    skills: 'Html • CSS3 • React.js',
     demoLink: 'https://use-popcorn-git-master-solafs-projects.vercel.app/',
-    companyProject: false,
   },
   {
     id: 5,
     image: '/assets/images/projects/dashboard.png',
     name: 'Dashboard',
-    skills: 'React.js',
+    skills: 'Html • CSS3 • React.js',
     demoLink: 'https://dashboard-green-delta.vercel.app/',
-    companyProject: false,
   },
   {
     id: 6,
     image: '/assets/images/projects/eat-n-split.png',
     name: 'Bill Splitter App',
-    skills: 'React.js',
+    skills: 'Html • CSS3 • React',
     demoLink: 'https://solaf10.github.io/Eat--N-Split/',
-    companyProject: false,
   },
   {
     id: 7,
     image: '/assets/images/projects/B-World.png',
     name: 'Online Book Store',
-    skills: 'HTML • CSS • JavaScript',
+    skills: 'Html • CSS3 • JS',
     demoLink: 'https://solaf10.github.io/B-World/',
-    companyProject: false,
   },
   {
     id: 8,
     image: '/assets/images/projects/softy pinko.png',
     name: 'Business Consulting Landing Page',
-    skills: 'HTML • CSS • Bootstrap',
+    skills: 'Html • CSS3 • Bootstrap',
     demoLink: 'https://solaf10.github.io/soft-pinko/',
-    companyProject: false,
   },
 ];
 
@@ -134,6 +126,7 @@ const Projects = ({ ref }) => {
               confidential={project.confidential}
               status={project.status}
               academicProject={project.academicProject}
+              index={i}
             />
           ))}
         </div>

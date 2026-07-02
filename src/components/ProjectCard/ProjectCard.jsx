@@ -13,6 +13,7 @@ const ProjectCard = ({
   style,
   status,
   academicProject,
+  index,
 }) => {
   const navigate = useNavigate();
 
@@ -21,7 +22,20 @@ const ProjectCard = ({
   }
 
   return (
-    <motion.div className='card' style={style}>
+    <motion.div
+      className='card'
+      style={style}
+      initial={index !== undefined && { opacity: 0, y: 50 }}
+      whileInView={index !== undefined && { opacity: 1, y: 0 }}
+      viewport={index !== undefined && { once: true, amount: 0.2 }}
+      transition={
+        index !== undefined && {
+          duration: 0.6,
+          delay: index * 0.12,
+          ease: 'easeOut',
+        }
+      }
+    >
       <div className='project-image' onClick={handleNavigation}>
         <div className='labels'>
           {(companyProject || academicProject) && (

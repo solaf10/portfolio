@@ -8,9 +8,9 @@ const bestProjects = [
   {
     id: 12,
     image: '/assets/images/projects/Athar.png',
-    title: 'Donation Campaign Management System',
+    name: 'Donation Campaign Management System',
     repoLink: 'https://github.com/solaf10/DonationCampaignDashboard',
-    skills: 'React.js • Redux Toolkit • React Query • Material UI • JavaScript',
+    skills: 'React.js • Redux Toolkit • Tanstack • MUI • JS',
     companyProject: false,
     academicProject: true,
     status: 'In Progress',
@@ -37,7 +37,7 @@ const bestProjects = [
     id: 11,
     image: '/assets/images/projects/ArchiLink.png',
     name: 'ArchiLink Architectural Connection Platform',
-    skills: 'React.js • JavaScript • CSS3',
+    skills: 'React.js • JS • CSS3',
     status: 'Local Project',
     academicProject: true,
   },
@@ -45,56 +45,56 @@ const bestProjects = [
     id: 1,
     image: '/assets/images/projects/TSDashboard.png',
     name: 'DashStack Dashboard',
-    skills: 'Html • Css3 • typescript • React',
+    skills: 'Html • CSS3 • TypeScript • React.js',
     demoLink: 'https://ts-dashboard-ftfi.vercel.app/',
   },
   {
     id: 2,
     image: '/assets/images/projects/EvoGym.png',
     name: 'Evo Gym',
-    skills: 'Html • Css3 • typescript  • React',
+    skills: 'Html • CSS3 • TypeScript  • React.js',
     demoLink: 'https://evo-gym-6ris.vercel.app/',
   },
   {
     id: 3,
     image: '/assets/images/projects/Mint-Minimal.png',
     name: 'Digital Agency',
-    skills: 'Html • Css3 • Vanilla javascript',
+    skills: 'Html • Css3 • JS',
     demoLink: 'https://solaf10.github.io/Mint-Minimal/',
   },
   {
     id: 4,
     image: '/assets/images/projects/usePopcorn.png',
     name: 'Movies app',
-    skills: 'Html • Css3 • React.js',
+    skills: 'Html • CSS3 • React.js',
     demoLink: 'https://use-popcorn-git-master-solafs-projects.vercel.app/',
   },
   {
     id: 5,
     image: '/assets/images/projects/dashboard.png',
     name: 'Dashboard',
-    skills: 'Html • Css3 • React.js',
+    skills: 'Html • CSS3 • React.js',
     demoLink: 'https://dashboard-green-delta.vercel.app/',
   },
   {
     id: 6,
     image: '/assets/images/projects/eat-n-split.png',
     name: 'Bill Splitter App',
-    skills: 'Html • Css3 • React',
+    skills: 'Html • CSS3 • React',
     demoLink: 'https://solaf10.github.io/Eat--N-Split/',
   },
   {
     id: 7,
     image: '/assets/images/projects/B-World.png',
     name: 'Online Book Store',
-    skills: 'Html • Css3 • Vanilla javascript',
+    skills: 'Html • CSS3 • JS',
     demoLink: 'https://solaf10.github.io/B-World/',
   },
   {
     id: 8,
     image: '/assets/images/projects/softy pinko.png',
     name: 'Business Consulting Landing Page',
-    skills: 'Html • Css3 • Bootstrap',
+    skills: 'Html • CSS3 • Bootstrap',
     demoLink: 'https://solaf10.github.io/soft-pinko/',
   },
 ];
@@ -160,7 +160,7 @@ const BestProjects = () => {
         </div>
         <div className='slider'>
           <div className='slider-container'>
-            {sliderProjects.map((project) => (
+            {sliderProjects.map((project, i) => (
               <ProjectCard
                 key={project.id}
                 id={project.id}
@@ -173,6 +173,7 @@ const BestProjects = () => {
                 status={project.status}
                 academicProject={project.academicProject}
                 style={{ transform: `translateX(-${100 * clickCounter}%)` }}
+                index={undefined}
               />
             ))}
           </div>
